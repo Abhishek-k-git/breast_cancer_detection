@@ -65,11 +65,11 @@ bare_nuclei.value_counts()
 | False | 16 |
 | dtype: int64 |
 
-```
+```python
 df = data.replace('?', np.nan)
 df['bare_nuclei'].value_counts()
 ```
-```
+```python
 df.describe().T
 ```
 ![data](https://github.com/Abhishek-k-git/breast_cancer_detection/blob/main/images/data.png)
@@ -82,7 +82,7 @@ After dataprocessing or cleaning, it is very crucial to visualize dataset, there
 
 Now data is divided into two sets one is *training dataset* which is used to train the model (just like a new born child learns by sensing things around him), the other dataset is *testing dataset* which is used to evaluate or predict the accuracy of model. The machine uses its model, apply to testing dataset to give out predicted results. The predicted output then compared to final result in actual dataset (In this case it is labeled as *class*). That's why it is necessary to first drop that column named class, before we train our model.
 
-```
+```python
 X = df.drop('class', axis = 1)
 y = df['class']
 X.shape, y.shape
@@ -92,12 +92,12 @@ x_train, x_test, y_train, y_test = train_test_split(X, y, test_size = 0.30, rand
 ```
 
 > K-neighbors classification
-```
+```python
 # from sklearn.neighbors import KNeighborsClassifier
 KNN = KNeighborsClassifier(n_neighbors = 4, weights = 'distance')
 KNN.fit(x_train, y_train)
 ```
-```
+```python
 knn_predict = KNN.predict(x_test)
 print('predicted class value: ')
 knn_predict
@@ -128,7 +128,7 @@ array([4, 4, 4, 2, 4, 2, 4, 4, 2, 2, 2, 2, 4, 2, 2, 4, 4, 2, 4, 2, 2, 4,
        2, 4, 4, 4, 2, 2, 2, 2, 2, 4, 4, 2, 2, 4, 4, 4, 2, 2, 2, 2, 2, 4,
        4, 4, 2, 4, 4, 2, 4, 4, 4, 4, 4, 2], dtype=int64)
 ```
-```
+```python
 from scipy.stats import zscore
 print('KNN predion score :{0: 2g}%'.format(KNN.score(x_test, y_test)*100))
 ```
@@ -137,12 +137,12 @@ print('KNN predion score :{0: 2g}%'.format(KNN.score(x_test, y_test)*100))
 
 > Support Vector Machine (SVM)
 
-```
+```python
 #from sklearn.svm import SVC
 SVC = SVC()
 SVC.fit(x_train, y_train)
 ```
-```
+```python
 print('SVM prediction')
 svm_predict = SVC.predict(x_test)
 svm_predict
