@@ -162,5 +162,5 @@ array([4, 4, 4, 2, 4, 2, 4, 4, 2, 2, 2, 2, 4, 2, 2, 4, 4, 2, 4, 2, 2, 4,
 ```
 **SVM prediction score :** ```95.7143%```
 -
--
+
 ![matrix](https://github.com/Abhishek-k-git/breast_cancer_detection/blob/main/images/matrix.png)
