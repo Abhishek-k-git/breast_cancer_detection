@@ -134,9 +134,8 @@ print('KNN predion score :{0: 2g}%'.format(KNN.score(x_test, y_test)*100))
 ```
 **KNN prediction score :** ```94.7619%```
 -
----------------------------------
 
-> K-neighbors classification
+> Support Vector Machine (SVM)
 
 ```
 #from sklearn.svm import SVC
@@ -163,6 +162,5 @@ array([4, 4, 4, 2, 4, 2, 4, 4, 2, 2, 2, 2, 4, 2, 2, 4, 4, 2, 4, 2, 2, 4,
 ```
 **SVM prediction score :** ```95.7143%```
 -
----------------------------------
 
 ![matrix](https://github.com/Abhishek-k-git/breast_cancer_detection/blob/main/images/matrix.png)
