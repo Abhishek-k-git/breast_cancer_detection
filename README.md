@@ -55,7 +55,7 @@ The data we have, may contain some impurities like null value or notations. Thes
 
 ``` data.info() ``` - returns data info like, data type
 .Here we can easily see that ``` bare_nuclei - 699 non-null - object ``` which means *bare_nuclei* has some impurities/data which is not int
-```
+```python
 bare_nuclei = pd.DataFrame(data['bare_nuclei'].str.isdigit())
 bare_nuclei.value_counts()
 ```
